@@ -67,7 +67,7 @@
         }
       } )
     },
-    { threshold: 0.2 }
+    { threshold: 0.5 }
   )
 
   document.querySelectorAll( '.img-reveal' ).forEach( el => observer.observe( el ) )
@@ -133,11 +133,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(white, #8b8bf630, #02052630);
+    color: var(--black);
     font-size: 2rem;
     height: 16vh;
     margin-bottom: 16vh;
-    background: linear-gradient(white, #8b8bf670, #02052670);
-    color: var(--blue);
+    border-radius: 10px;
+
   }
 
   .ehpad-2019-title {
