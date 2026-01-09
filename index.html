@@ -46,10 +46,11 @@
         alt="Aprés le spectacle">
       <img loading="lazy" class="normal-size img-reveal from-left" src="images/ateliers_EHPAD-2019/spectacle.webp"
         alt="La scène du spectacle">
-    </div>
-    <a class="lien-youtube" target="_blank"
+         <a class="lien-youtube" target="_blank"
       href="https://www.youtube.com/watch?v=rZQsPN0sGXc&list=PLuBAYBgxchfiTOT4kOoQajakewulYunJY&index=1&t=3s"
-      alt="Lien pour voir le documentaire entier">Regarder le documentaire sur youtube</a>
+      alt="Lien pour voir le documentaire entier">Voir film entier</a>
+    </div>
+   
 </body>
 
 </html>
@@ -134,7 +135,8 @@
     justify-content: center;
     align-items: center;
     background: linear-gradient(white, #8b8bf630, #02052630);
-    color: var(--black);
+    color: var(--blue);
+    text-shadow: 1px 1px 1px var(--black), -1px -1px 4px var(--black);
     font-size: 2rem;
     height: 16vh;
     margin-bottom: 16vh;
@@ -156,6 +158,7 @@
 
   .img-EHPAD-container {
     /* border: 3px red solid; */
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -200,12 +203,24 @@
   }
 
   .lien-youtube {
-    margin: -20vh auto 0 auto;
+    border: 2px var(--blue) solid;
+    position: absolute;
+    bottom : -4vh;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 1vh 1vw;
     text-decoration: none;
     font-size: 1.2rem;
-    color: var(--black);
+    border-radius: 10px;
+    color: var(--blue);
+    /* transition: background-color 0.3s, color 0.3s; */
   }
-
+.lien-youtube:hover {
+    background-color: var(--blue);
+    color: white;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    transform:  translateX(50%) scale(0.9);
+  }
   @media screen and (max-width: 768px) {
     .name-profession {
       font-size: 2.2rem;
