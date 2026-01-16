@@ -9,6 +9,7 @@
 
 <body>
   <div class="container">
+
     <div class="name-profession">
       <div class="name">Luisella Avvinti</div>
       <div class="profession">Danseuse chorégraphe</div>
@@ -37,7 +38,7 @@
       </div>
     </div>
 
-    <div class="cartouche">Intevenante Artistique</div>
+    <div class="cartouche">Intervenante Artistique</div>
     <div class="ehpad-2019-title">Je me souviens</div>
     <div class="ehpad-2019-description"> Un spectacle sur le souvenir à l'EHPAD La Pirandelle à Paris, en 2019.<div>
         Production et Images de Grand Angle. </div>
@@ -51,17 +52,18 @@
         src="images/ateliers_EHPAD-2019/luisella_ateliers_2.webp" alt="Luisella animant un atelier">
       <img loading="lazy" class="normal-size img-reveal from-right"
         src="images/ateliers_EHPAD-2019/luisella_costume_dame_2.webp" alt="Luisella essaynt un costume avec une dame">
-      <!-- <img loading="lazy" class="large-size img-reveal from-left" src="images/ateliers_EHPAD-2019/luiselle_duo.webp"
-        alt="Luisella aidant une dame à faire les pas de danse"> -->
       <img loading="lazy" class="large-size img-reveal from-left" src="images/ateliers_EHPAD-2019/spectacle_final.webp"
         alt="Aprés le spectacle">
-      <!-- <img loading="lazy" class="normal-size img-reveal from-left" src="images/ateliers_EHPAD-2019/spectacle.webp"
-        alt="La scène du spectacle"> -->
       <a class="lien-youtube" target="_blank"
         href="https://www.youtube.com/watch?v=rZQsPN0sGXc&list=PLuBAYBgxchfiTOT4kOoQajakewulYunJY&index=1&t=3s"
-        alt="Lien pour voir le documentaire entier">Voir film entier</a>
+        alt="Lien pour voir le documentaire entier">Voir le film</a>
     </div>
-
+    <div class="CV">
+      <a href="static/CV_Luisella_Avvinti.pdf" download class="cv-download"><img src="static/download-icon.png"
+          alt="icône de téléchargement du CV"></a>
+      <img src="static/CV-img.png" width="300px" height="600px" class="CV-img">
+    </div>
+  </div>
 </body>
 
 </html>
@@ -83,6 +85,17 @@
   )
 
   document.querySelectorAll( '.img-reveal' ).forEach( el => observer.observe( el ) )
+
+
+
+
+
+
+  document.addEventListener( 'click', () =>
+  {
+    const cvImage = document.querySelector( '.CV-img' );
+    cvImage.classList.toggle( 'CV-img-clicked' );
+  } );
 </script>
 
 <style>
@@ -136,10 +149,11 @@
     /* border: 3px green solid; */
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: 76vw;
     row-gap: 4vh;
+    margin: auto;
     font-size: 1rem;
-    text-align: justify;
+    text-align: left;
   }
 
   .personne {
@@ -169,13 +183,13 @@
     text-shadow: -1px -1px 3px var(--black);
     font-size: 1.8rem;
     height: 12vh;
-    margin: 12vh 0;
+    margin: 14vh 0;
     border-radius: 10px;
 
   }
 
   .ehpad-2019-title {
-    margin: 0 0 4vh 0;
+    margin: 0 0 3vh 0;
     color: var(--blue);
     text-shadow: 1px 1px 1px var(--black);
     font-size: 1.5rem;
@@ -183,7 +197,7 @@
 
   .ehpad-2019-description {
     font-size: 1.1rem;
-    margin: 0 0 8vh 0;
+    margin: 0 0 0vh 0;
   }
 
   .img-EHPAD-container {
@@ -196,11 +210,11 @@
     column-gap: 4vw;
     row-gap: 8vh;
     margin: 0 auto 16vh auto;
-    padding: 0 4vw;
+    padding: 0 4vw 8vh 4vw;
     max-width: 1000px;
   }
 
-  img {
+  .normal-size {
     width: 40%;
     height: 10%;
     margin-bottom: 8vh;
@@ -209,7 +223,6 @@
   .large-size {
     width: 50%;
     height: 10%;
-
   }
 
   .img-reveal {
@@ -235,14 +248,16 @@
   .lien-youtube {
     border: 2px var(--blue) solid;
     position: absolute;
-    bottom: -4vh;
+    bottom: 0vh;
     right: 50%;
     transform: translateX(50%);
     padding: 1vh 1vw;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     border-radius: 10px;
     color: var(--blue);
+    transition: background-color 0.1s, color 0.1s, transform 0.1s;
+
   }
 
   .lien-youtube:hover {
@@ -250,6 +265,39 @@
     color: white;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     transform: translateX(50%) scale(0.9);
+  }
+
+  .CV {
+    border: 3px blue solid;
+    position: relative;
+    margin-bottom: 8vh;
+    display: flex;
+    justify-content: center;
+   
+  }
+
+  .cv-download>img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: 1px var(--blue) solid;
+    display: block;
+    width: 30px;
+    height: auto;
+  }
+
+  .CV-img {
+    border: 2px var(--blue) solid;
+    width: 60%;
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .CV-img-clicked {
+    transform: scale(1.8);
+    transition: all 0.3s ease-in-out;
   }
 
   @media screen and (max-width: 768px) {
@@ -289,7 +337,6 @@
     }
 
     .ehpad-2019-title {
-
       font-size: 1.3rem;
       margin: 0 0 2vh 0;
     }
@@ -303,13 +350,14 @@
       row-gap: 2vh;
     }
 
-    img {
+    .normal-size {
       margin: 4vh auto;
       width: 75%;
       height: 10%;
     }
 
     .large-size {
+      margin: 4vh auto;
       width: 75%;
       height: 10%;
     }
