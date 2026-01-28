@@ -17,15 +17,15 @@
     <div class="description-luisella">
       <div class="personne">
         Luisella Avvinti, artiste-intervenante
-        Diplômée des Beaux-Arts de Milan, Luisella Avvinti débute sa carrière en tant qu’assistante scénographe auprès
+        Diplômée des Beaux-Arts de Milan, Luisella Avvinti débute sa carrière en tant qu'assistante scénographe auprès
         de Carlo Sala. Elle collabore à la scénographie de nombreuses productions dans des théâtres prestigieux,
-        notamment la Scala et le Teatro dell’Elfo à Milan, ainsi que le Teatro San Carlo à Naples.
+        notamment la Scala et le Teatro dell'Elfo à Milan, ainsi que le Teatro San Carlo à Naples.
       </div>
       <div class="metier">
         <div> Elle se dirige ensuite vers la danse et collabore avec plusieurs compagnies de théâtre et de danse en
           France,
           dont la compagnie de danse contemporaine Invivo, au sein de laquelle elle évolue de 2001 à 2008. Elle crée et
-          interprète le solo À force d’attendre et prend part à des projets collaboratifs impliquant des personnes
+          interprète le solo À force d'attendre et prend part à des projets collaboratifs impliquant des personnes
           âgées,
           tels que Le cœur à barbe ou Je me souviens, pour Grand Angle Productions. Elle développe également un travail
           à
@@ -33,7 +33,7 @@
           magiques avec la compagnie Sémaphore.</div>
         <div>Attachée à la transmission et à la médiation auprès de publics dont l'accès aux salles de
           spectacles est limité,
-          elle intervient dans des écoles, associations et hôpitaux, en s’appuyant sur une approche pluridisciplinaire
+          elle intervient dans des écoles, associations et hôpitaux, en s'appuyant sur une approche pluridisciplinaire
           nourrie par son parcours en danse et arts plastiques.</div>
       </div>
     </div>
@@ -58,10 +58,13 @@
         href="https://www.youtube.com/watch?v=rZQsPN0sGXc&list=PLuBAYBgxchfiTOT4kOoQajakewulYunJY&index=1&t=3s"
         alt="Lien pour voir le documentaire entier">Voir le film</a>
     </div>
+
+    <!-- CV Section repositionnée -->
     <div class="CV">
-      <a href="static/CV_Luisella_Avvinti.pdf" download class="cv-download"><img src="static/download-icon.png"
-          alt="icône de téléchargement du CV"></a>
-      <img src="static/CV-img.png" width="300px" height="600px" class="CV-img">
+      <a href="static/CV_Luisella_Avvinti_2026.docx" target="_blank" class="cv-link">
+        <img src="static/CV-img.png" alt="CV Luisella Avvinti" class="CV-img">
+        <span class="cv-label">Mon CV</span>
+      </a>
     </div>
   </div>
 </body>
@@ -85,24 +88,12 @@
   )
 
   document.querySelectorAll( '.img-reveal' ).forEach( el => observer.observe( el ) )
-
-
-
-
-
-
-  document.addEventListener( 'click', () =>
-  {
-    const cvImage = document.querySelector( '.CV-img' );
-    cvImage.classList.toggle( 'CV-img-clicked' );
-  } );
 </script>
 
 <style>
   :root {
     --blue: #8b8bf6;
     --black: #020526;
-    /* 020526 8b8bf6 */
   }
 
   @font-face {
@@ -122,16 +113,16 @@
   }
 
   .container {
-    /* border: 3px blue solid; */
     display: flex;
     flex-direction: column;
     max-width: 1443px;
     margin: 0 10vw;
     height: 100%;
+    position: relative;
+    padding-bottom: 8vh;
   }
 
   .name-profession {
-    /* border: 3px red solid; */
     color: var(--black);
     background: linear-gradient(white, rgb(139, 139, 246, .2), rgb(139, 139, 246, .3));
     margin: 8vh 0 12vh 0;
@@ -146,7 +137,6 @@
   }
 
   .description-luisella {
-    /* border: 3px green solid; */
     display: flex;
     flex-direction: column;
     width: 76vw;
@@ -185,7 +175,6 @@
     height: 12vh;
     margin: 14vh 0;
     border-radius: 10px;
-
   }
 
   .ehpad-2019-title {
@@ -201,7 +190,6 @@
   }
 
   .img-EHPAD-container {
-    /* border: 3px red solid; */
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -257,7 +245,6 @@
     border-radius: 10px;
     color: var(--blue);
     transition: background-color 0.1s, color 0.1s, transform 0.1s;
-
   }
 
   .lien-youtube:hover {
@@ -267,37 +254,78 @@
     transform: translateX(50%) scale(0.9);
   }
 
+  /* Nouveau style pour le CV */
   .CV {
-    border: 3px blue solid;
-    position: relative;
-    margin-bottom: 8vh;
-    display: flex;
-    justify-content: center;
-   
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
   }
 
-  .cv-download>img {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    border: 1px var(--blue) solid;
+  .cv-link {
     display: block;
-    width: 30px;
-    height: auto;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
   }
 
   .CV-img {
-    border: 2px var(--blue) solid;
-    width: 60%;
-    height: 100%;
-    margin-bottom: 0;
+    width: 80px;
+    height: auto;
+    border: 3px solid var(--blue);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(139, 139, 246, 0.4);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation: float 3s ease-in-out infinite;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
-  .CV-img-clicked {
-    transform: scale(1.8);
-    transition: all 0.3s ease-in-out;
+  .cv-label {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--blue);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .cv-link:hover .CV-img {
+    transform: scale(1.5);
+    margin: 4vh   2vw;
+    box-shadow: 0 8px 30px rgba(139, 139, 246, 0.6);
+    animation: float-hover 1.5s ease-in-out infinite;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .cv-link:hover .cv-label {
+    margin: 4vh   2vw;opacity: 1;
+  }
+
+  /* Animation de flottement légère */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(2deg);
+    }
+  }
+
+  /* Animation de flottement renforcée au hover */
+  @keyframes float-hover {
+    0%, 100% {
+      transform: scale(2) translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: scale(2) translateY(-8px) rotate(-2deg);
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -365,7 +393,29 @@
     .lien-youtube {
       font-size: .9rem;
       margin: -16vh auto 0 auto;
+    }
 
+    .CV {
+      bottom: 15px;
+      right: 15px;
+    }
+
+    .CV-img {
+      width: 60px;
+    }
+
+    .cv-link:hover .CV-img {
+      transform: scale(1.5);
+      /* animation: float-hover 1.5s ease-in-out infinite; */
+    }
+
+    @keyframes float-hover {
+      0%, 100% {
+        transform: scale(1) translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: scale(1.5) translateY(-8px) rotate(-2deg);
+      }
     }
   }
 </style>
