@@ -47,8 +47,10 @@
 
 
     <div class="spectacle ehpad">
-      <div class="spectacle-title">Je me souviens <div class="spectacle-description"> Un spectacle sur le souvenir à
-          l'EHPAD La Pirandelle à Paris, en 2019.<div>
+      <div class="spectacle-title">Je me souviens <div class="spectacle-description">
+          <div> Un spectacle sur le souvenir à
+            l'EHPAD La Pirandelle à Paris, en 2019.</div>
+          <div>
             Production et Images de Grand Angle. </div>
         </div>
 
@@ -195,7 +197,7 @@
   }
 
   .spectacle {
-    border: 3px solid var(--black);
+    border: 2px solid var(--black);
     border-right: 0 solid transparent;
     border-bottom: 0 solid transparent;
     position: relative;
@@ -211,18 +213,20 @@
     box-shadow: 8px 8px 20px var(--black);
     border-radius: 10px;
   }
-.spectacle img {
+
+  .spectacle img {
     border: 2px solid var(--black);
     border-radius: 10px;
-}
-  .ehpad {
-    
-
   }
+
+  /* .ehpad {
+    border: 0 solid transparent;
+    box-shadow: inset -4px -4px 10px, inset 4px 4px 10px;
+  } */
 
   .groundzero {
     border: 0 solid transparent;
-    box-shadow: inset -8px -8px 20px, inset 8px 8px 20px;
+    box-shadow: inset -4px -4px 10px, inset 4px 4px 10px;
   }
 
   .spectacle-title {
@@ -234,10 +238,21 @@
   }
 
   .spectacle-description {
-    font-size: 1.1rem;
+    /* border: 2px solid var(--black); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    height: 8vh;
+    max-width: 50%;
+    margin: 4vh 0 0 0;
     color: var(--black);
     text-shadow: 0 0 0 var(--black);
-    margin: 4vh 0 0 0;
+    font-size: 1.1rem;
+  }
+
+  .spectacle-description:nth-child(1) {
+    line-height: 1.2rem;
   }
 
   .normal-size {
