@@ -46,7 +46,7 @@
     <div class="cartouche">Intervenante Artistique</div>
 
 
-    <div class="spectacle">
+    <div class="spectacle ehpad">
       <div class="spectacle-title">Je me souviens <div class="spectacle-description"> Un spectacle sur le souvenir à
           l'EHPAD La Pirandelle à Paris, en 2019.<div>
             Production et Images de Grand Angle. </div>
@@ -67,14 +67,14 @@
         alt="Lien pour voir le documentaire entier">Voir le film</a>
     </div>
 
-    <div class="spectacle">
-      <div class="spectacle-title">Hautes Fréquences <div class="spectacle-description"> Festival Les Jalouses.<div>
+    <div class="spectacle groundzero">
+      <div class="spectacle-title ">Hautes Fréquences <div class="spectacle-description"> Festival Les Jalouses.<div>
             Au théâtre L'Etoile du Nord à Paris, en 2005 </div>
         </div>
       </div>
-      <img loading=" lazy" class="large-size img-reveal from-left" src="images/ground-zero/2.png"
+      <img loading="lazy" class="normal-size img-reveal from-left" src="images/ground-zero/7.png"
         alt="Luisella Avvinti danse sur scène">
-      <img loading="lazy" class="normal-size img-reveal from-right" src="images/ground-zero/7.png"
+      <img loading=" lazy" class="large-size img-reveal from-right" src="images/ground-zero/2.png"
         alt="Luisella Avvinti danse sur scène">
       <img loading="lazy" class="large-size img-reveal from-right" src="images/ground-zero/4.png"
         alt="Luisella Avvinti danse sur scène">
@@ -190,12 +190,12 @@
     text-shadow: -1px -1px 3px var(--black);
     font-size: 1.8rem;
     height: 12vh;
-    margin: 8vh 0 16vh 0;
+    margin: 8vh 0 20vh 0;
     border-radius: 10px;
   }
 
   .spectacle {
-    border: 6px solid var(--blue);
+    border: 3px solid var(--blue);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -206,8 +206,15 @@
     margin: 0 auto 16vh auto;
     padding: 0 4vw 8vh 4vw;
     max-width: 1000px;
-    box-shadow: 8px 8px 20px ;
     border-radius: 10px;
+  }
+
+  .ehpad {
+    box-shadow: 8px 8px 20px, -8px -8px 20px;
+  }
+
+  .groundzero {
+    box-shadow: inset 8px 8px 20px, inset -8px -8px 20px;
   }
 
   .spectacle-title {
@@ -355,7 +362,7 @@
   @media screen and (max-width: 768px) {
     .name-profession {
       font-size: 2.2rem;
-      margin-bottom: 8vh;
+      margin-bottom: 4vh;
     }
 
     .profession {
@@ -364,7 +371,7 @@
 
     .description-luisella {
       flex-direction: column;
-      margin-top: 8vh;
+      margin-top: 4vh;
       row-gap: 4vh;
     }
 
@@ -385,16 +392,23 @@
       text-shadow: -1px -1px 2px var(--black);
       font-size: 1.3rem;
       height: 12vh;
-      margin-bottom: 12vh;
+      margin-top: 4vh;
+      margin-bottom: 16vh;
     }
 
     .spectacle-title {
-      font-size: 1.3rem;
-      margin: 0 0 2vh 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 1vh;
+      margin: 4vh 0 0 0;
+      text-align: center;
     }
 
     .spectacle-description {
       font-size: 1rem;
+      line-height: 1.8rem;
       margin: 0 0 2vh 0;
     }
 
