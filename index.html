@@ -59,9 +59,8 @@
         alt="Lien pour voir le documentaire entier">Voir le film</a>
     </div>
 
-    <!-- CV Section repositionnée -->
     <div class="CV">
-      <a href="static/CV_Luisella_Avvinti_2026.docx" target="_blank" class="cv-link">
+      <a href="static/CV_Luisella_Avvinti_2026.pdf" target="_blank" class="cv-link">
         <img src="static/CV-img.png" alt="CV Luisella Avvinti" class="CV-img">
         <span class="cv-label">Mon CV</span>
       </a>
@@ -94,6 +93,7 @@
   :root {
     --blue: #8b8bf6;
     --black: #020526;
+    --cta: #dc493a;
   }
 
   @font-face {
@@ -234,7 +234,7 @@
   }
 
   .lien-youtube {
-    border: 2px var(--blue) solid;
+    border: 2px var(--cta) solid;
     position: absolute;
     bottom: 0vh;
     right: 50%;
@@ -243,22 +243,21 @@
     text-decoration: none;
     font-size: 1.3rem;
     border-radius: 10px;
-    color: var(--blue);
+    color: var(--cta);
     transition: background-color 0.1s, color 0.1s, transform 0.1s;
   }
 
   .lien-youtube:hover {
-    background-color: var(--blue);
+    background-color: var(--cta);
     color: white;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     transform: translateX(50%) scale(0.9);
   }
 
-  /* Nouveau style pour le CV */
   .CV {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
     z-index: 1000;
   }
 
@@ -270,49 +269,48 @@
   }
 
   .CV-img {
-    width: 80px;
+    width: 60px;
     height: auto;
-    border: 3px solid var(--blue);
+    border: 3px solid var(--cta);
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(139, 139, 246, 0.4);
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     animation: float 3s ease-in-out infinite;
-      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .cv-label {
     position: absolute;
-    bottom: -25px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--blue);
+    background: var(--cta);
     color: white;
     padding: 4px 12px;
     border-radius: 12px;
     font-size: 0.75rem;
     white-space: nowrap;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
     pointer-events: none;
   }
 
   .cv-link:hover .CV-img {
-    transform: scale(1.5);
-    margin: 4vh   2vw;
+    transform: scale(1.2);
+    margin: 4vh 2vw;
     box-shadow: 0 8px 30px rgba(139, 139, 246, 0.6);
     animation: float-hover 1.5s ease-in-out infinite;
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
-  .cv-link:hover .cv-label {
-    margin: 4vh   2vw;opacity: 1;
-  }
 
-  /* Animation de flottement légère */
   @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0px) rotate(0deg);
     }
+
     50% {
       transform: translateY(-10px) rotate(2deg);
     }
@@ -320,11 +318,14 @@
 
   /* Animation de flottement renforcée au hover */
   @keyframes float-hover {
-    0%, 100% {
-      transform: scale(2) translateY(0px) rotate(0deg);
+
+    0%,
+    100% {
+      transform: scale(1.8) translateY(0px) rotate(0deg);
     }
+
     50% {
-      transform: scale(2) translateY(-8px) rotate(-2deg);
+      transform: scale(1.8) translateY(-8px) rotate(-2deg);
     }
   }
 
@@ -410,9 +411,12 @@
     }
 
     @keyframes float-hover {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: scale(1) translateY(0px) rotate(0deg);
       }
+
       50% {
         transform: scale(1.5) translateY(-8px) rotate(-2deg);
       }
