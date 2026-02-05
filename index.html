@@ -114,7 +114,7 @@
     --blue: #8b8bf6;
     --black: #020526;
     --cta: #dc493a;
-/*  */
+    /*  */
     --testMarron: #724959;
     --testMarronClair: #C99194;
     --cta: #577590;
@@ -139,7 +139,7 @@
   .container {
     display: flex;
     flex-direction: column;
-    max-width: 1443px;
+    max-width: 1243px;
     margin: 0 10vw;
     height: 100%;
     position: relative;
@@ -163,7 +163,7 @@
   .description-luisella {
     display: flex;
     flex-direction: column;
-    width: 76vw;
+    /* width: 76vw; */
     row-gap: 4vh;
     margin: auto;
     font-size: 1rem;
@@ -481,6 +481,16 @@
       50% {
         transform: scale(1.5) translateY(-8px) rotate(-2deg);
       }
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .container{
+      margin: auto;
+    }
+    .CV {
+      right: 10vw;
+
     }
   }
 </style>
