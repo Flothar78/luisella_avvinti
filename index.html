@@ -111,13 +111,13 @@
 
 <style>
   :root {
-    /* --blue: #8b8bf6;
+    --blue: #8b8bf6;
     --black: #020526;
-    --cta: #dc493a; */
-
+    --cta: #dc493a;
+/*  */
     --testMarron: #724959;
     --testMarronClair: #C99194;
-    --testJaune: #F8C896;
+    --cta: #577590;
   }
 
   @font-face {
@@ -132,7 +132,7 @@
   html {
     margin: 0;
     padding: 0;
-    color: var(--black);
+    color: var(--testMarron);
     font-family: 'Roboto', sans-serif;
   }
 
@@ -147,8 +147,8 @@
   }
 
   .name-profession {
-    color: var(--black);
-    background: linear-gradient(white, rgb(139, 139, 246, .2), rgb(139, 139, 246, .3));
+    color: var(--testMarronClair);
+    background: linear-gradient(white, #8b8bf633, #8b8bf680);
     margin: 8vh 0 12vh 0;
     font-size: 2.5rem;
     border-radius: 10px;
@@ -157,7 +157,7 @@
 
   .profession {
     font-size: 1.8rem;
-    color: var(--blue);
+    color: var(--testMarron);
   }
 
   .description-luisella {
@@ -192,9 +192,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(white, #8b8bf630, #02052630);
-    color: var(--blue);
-    text-shadow: -1px -1px 3px var(--black);
+    background: linear-gradient(white, #8b8bf633, #02052680);
+    color: var(--testMarron);
+    text-shadow: -1px -1px 3px var(--testMarronClair);
     font-size: 1.8rem;
     height: 12vh;
     margin: 8vh 0 20vh 0;
@@ -216,16 +216,16 @@
   }
 
   .spectacle img {
-    /* border: 2px solid var(--black); */
+    /* border: 2px solid var(--testMarron); */
     border-radius: 10px;
   }
 
   .ehpad {
-    box-shadow: inset 3px 3px 12px var(--black);
+    box-shadow: inset 2px 2px 12px var(--testMarron);
   }
 
   .groundzero {
-    box-shadow: 3px 3px 12px var(--black);
+    box-shadow: 3px 3px 12px var(--testMarron);
   }
 
   .company-name {
@@ -235,13 +235,13 @@
   .spectacle-title {
     margin: 4vh 0 0 0;
     min-width: 100%;
-    color: var(--blue);
-    text-shadow: 1px 1px 1px var(--black);
+    color: var(--testMarronClair);
+    text-shadow: 1px 1px 1px var(--testMarron);
     font-size: 1.5rem;
   }
 
   .spectacle-description {
-    /* border: 2px solid var(--black); */
+    /* border: 2px solid var(--testMarron); */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -249,8 +249,8 @@
     height: 8vh;
     max-width: 50%;
     margin: 4vh 0 0 0;
-    color: var(--black);
-    text-shadow: 0 0 0 var(--black);
+    color: var(--testMarron);
+    text-shadow: 0 0 0 var(--testMarron);
     font-size: 1.1rem;
   }
 
@@ -414,7 +414,7 @@
     }
 
     .cartouche {
-      text-shadow: -1px -1px 2px var(--black);
+      text-shadow: -1px -1px 2px var(--testMarronClair);
       font-size: 1.3rem;
       height: 12vh;
       margin-top: 4vh;
