@@ -110,8 +110,8 @@
 
     <img loading="lazy" class="large-size img-reveal from-right" src="images/intimites_singulieres/1.jpg"
       alt="Luisella Avvinti danse sur scène">
-    <img loading=" lazy" class="large-size img-reveal from-right" src="images/intimites_singulieres/2.jpg">
-    <img loading="lazy" class="normal-size img-reveal from-left" src="images/intimites_singulieres/3.jpg"
+    <img loading=" lazy" class="large-size img-reveal from-left" src="images/intimites_singulieres/2.jpg">
+    <img loading="lazy" class="normal-size img-reveal from-right" src="images/intimites_singulieres/3.jpg"
       alt="Luisella Avvinti danse sur scène">
   </div>
 
@@ -119,28 +119,21 @@
     <div class="spectacle-title ">Presto Giubilato Largo Desolato<div class="company-name">Compagnie Invivo</div>
       <div class="spectacle-description"> Tournée Nationale Theâters et Festivals<div>
           <div>Chorégraphie de Nieke Swennen</div>
-          
         </div>
         <div>Photos de Philppe Bertin</div>
       </div>
-
     </div>
-
-    <img loading="lazy" class="large-size img-reveal from-right" src="images/presto_giubilato/repet_1.jpg"
+    <img loading="lazy" class="normal-size img-reveal from-right" src="images/presto_giubilato/repet_1.jpg"
       alt="Luisella Avvinti danse sur scène">
-    <img loading=" lazy" class="large-size img-reveal from-right" src="images/presto_giubilato/repet_2.jpg">
-    <img loading="lazy" class="normal-size img-reveal from-left" src="images/presto_giubilato/repet_3.jpg"
+    <img loading=" lazy" class="normal-size img-reveal from-right" src="images/presto_giubilato/repet_2_1.png">
+    <img loading="lazy" class="large-size img-reveal from-left" src="images/presto_giubilato/repet_3.jpg"
       alt="Luisella Avvinti danse sur scène">
-      <img loading="lazy" class="normal-size img-reveal from-left" src="images/presto_giubilato/spectacle_1.jpg"
-      alt="Luisella Avvinti danse sur scène">
-      <img loading="lazy" class="normal-size img-reveal from-left" src="images/presto_giubilato/spectacle_2.jpg"
-      alt="Luisella Avvinti danse sur scène">
+    <div class="presto_spectacle"> <img loading="lazy" class="large-size img-reveal from-left"
+        src="images/presto_giubilato/spectacle_1.jpg" alt="Luisella Avvinti danse sur scène">
+      <img loading="lazy" class="normal-size img-reveal from-right" src="images/presto_giubilato/spectacle_2.jpg"
+        alt="Luisella Avvinti danse sur scène">
+    </div>
   </div>
-
-
-
-
-
 
 
 </body>
@@ -270,31 +263,33 @@
     max-width: 1000px;
     margin: 0 auto 16vh auto;
     padding: 0 4vw 16vh 4vw;
-
     border-radius: 10px;
   }
-
   .spectacle img {
     border-radius: 10px;
   }
-
   .ehpad {
     box-shadow: inset 2px 2px 12px var(--black);
   }
-
   .groundzero {
     box-shadow: 3px 3px 12px var(--black);
   }
-
   .invivo {
     justify-content: center;
-    box-shadow: inset 2px 2px 12px var(--black);
+    border: 4px solid var(--main);
+    /* box-shadow: inset 2px 2px 12px var(--black); */
   }
-
+  .presto_spectacle {
+    /* border: 1px red solid; */
+    display: flex;
+    justify-content: space-between;
+  }
+  .presto_spectacle img {
+    margin: auto;
+  }
   .company-name {
     font-size: 1.2rem;
   }
-
   .spectacle-title {
     margin: 4vh 0 0 0;
     min-width: 100%;
